@@ -1,0 +1,18 @@
+
+    <input type="text" placeholder="Post title" [(ngModel)]="postTitle" />
+<br>
+    <textarea type="text" placeholder="Post title" [(ngModel)]="postDetails" ></textarea>
+    <br>
+    <input type="text" placeholder="Post title" [(ngModel)]="postImage" />
+    <br>
+    <label for="addbg">Add Background</label>
+
+    <input type="checkbox" placeholder="Post title" id="addbg" [(ngModel)]="hasBackground" />
+
+
+<div [style.color]="hasBackground? 'red': ''">
+
+    <h1>{{postTitle}}</h1>
+    <p>{{postDetails}}</p>
+    <img [src]="postImage" alt="a post image">
+</div>

@@ -1,0 +1,6 @@
+<span [ngStyle]="{
+    color: colorProvided
+}">{{post?.postTitle}}</span>
+<br>
+
+<button (click)="addAPost(post?.postTitle, post?.id)">Add same post</button>
