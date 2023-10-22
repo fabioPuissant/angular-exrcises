@@ -15,7 +15,7 @@ export class PostService {
         {id:5, postTitle: 'Azure Entra ID, the new and improved Azure Active Directory'},
         {id:6, postTitle: 'Rust lang for the 4th year chosen as favorite proglang'},
     ]
-Q
+
     getPosts(): Array<any> {
         return this.postList.copyWithin(-1, 0);
     }
