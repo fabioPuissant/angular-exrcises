@@ -19,7 +19,11 @@ export class PostListComponent implements OnInit {
 
 
   onAddPostHandler($event: any) {
-    this.postService.addPost($event.value)
+    let id = -1;
+    this.posts?.forEach(post=> post.id > id ? id = post.id : id);
+    ++id;
+    $event.id = id;
+    this.postService.addPost($event);
   }
 
 

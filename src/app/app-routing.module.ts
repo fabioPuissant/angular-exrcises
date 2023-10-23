@@ -7,6 +7,7 @@ import { CustompipeComponent } from './components/custompipe/custompipe.componen
 import { PostComponent } from './components/post/post.component';
 import { PostListComponent } from './components/post-list/post-list.component';
 import { PostMainComponent } from './components/post-main/post-main.component';
+import { FormsExampleComponent } from './components/forms-example/forms-example.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'tryouts', pathMatch: 'full'}, 
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: 'twoway', component: TaskTwoWayDataBindingComponent},
   {path: 'directives', component: DirectivesComponent},
   {path: 'custom-pipes', component: CustompipeComponent},
-  {path: 'service-examples', component: PostMainComponent}
+  {path: 'service-examples', component: PostMainComponent},
+  {path: 'forms-example', component: FormsExampleComponent}
 ];
 
 @NgModule({

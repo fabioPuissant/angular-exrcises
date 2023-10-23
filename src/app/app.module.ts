@@ -16,6 +16,7 @@ import { PostService } from './services/post.service';
 import { PostListComponent } from './components/post-list/post-list.component';
 import { SecondPostListComponent } from './components/second-post-list/second-post-list.component';
 import { PostMainComponent } from './components/post-main/post-main.component';
+import { FormsExampleComponent } from './components/forms-example/forms-example.component';
 
 @NgModule({
   declarations: [
@@ -30,14 +31,15 @@ import { PostMainComponent } from './components/post-main/post-main.component';
     PostComponent,
     PostListComponent,
     SecondPostListComponent,
-    PostMainComponent
+    PostMainComponent,
+    FormsExampleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

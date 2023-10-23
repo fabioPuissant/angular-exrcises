@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Inject, Input, OnInit, Output } from '@angular/core';
+import { Post } from 'src/app/models/post';
 import { PostService } from 'src/app/services/post.service';
 
 @Component({
@@ -9,13 +10,13 @@ import { PostService } from 'src/app/services/post.service';
 })
 export class PostComponent implements OnInit{
   @Input()
-  post!: any;
+  post!: Post;
   @Input()
   colorProvided!: any;
-  @Output('onAddPost') addPostEmitter = new EventEmitter<any>();
+  @Output('onAddPost') addPostEmitter = new EventEmitter<Post>();
   constructor() {  }
   ngOnInit(): void {}
   addAPost(title: string, postId: number): void {
-    this.addPostEmitter.emit({id: postId, postTitle: title});
+    this.addPostEmitter.emit({id: -1, postTitle: title});
   }
 }
