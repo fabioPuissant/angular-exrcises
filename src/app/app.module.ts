@@ -17,6 +17,7 @@ import { PostListComponent } from './components/post-list/post-list.component';
 import { SecondPostListComponent } from './components/second-post-list/second-post-list.component';
 import { PostMainComponent } from './components/post-main/post-main.component';
 import { FormsExampleComponent } from './components/forms-example/forms-example.component';
+import { ObservableExercisesComponent } from './components/observable-exercises/observable-exercises.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FormsExampleComponent } from './components/forms-example/forms-example.
     PostListComponent,
     SecondPostListComponent,
     PostMainComponent,
-    FormsExampleComponent
+    FormsExampleComponent,
+    ObservableExercisesComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { PostComponent } from './components/post/post.component';
 import { PostListComponent } from './components/post-list/post-list.component';
 import { PostMainComponent } from './components/post-main/post-main.component';
 import { FormsExampleComponent } from './components/forms-example/forms-example.component';
+import { ObservableExercisesComponent } from './components/observable-exercises/observable-exercises.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'tryouts', pathMatch: 'full'}, 
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'directives', component: DirectivesComponent},
   {path: 'custom-pipes', component: CustompipeComponent},
   {path: 'service-examples', component: PostMainComponent},
-  {path: 'forms-example', component: FormsExampleComponent}
+  {path: 'forms-example', component: FormsExampleComponent},
+  {path: 'observable-example', component: ObservableExercisesComponent},
 ];
 
 @NgModule({
