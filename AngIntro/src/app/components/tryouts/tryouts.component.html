@@ -1,0 +1,7 @@
+
+<!-- Template variable #username -->
+<input type="text" placeholder="username" (keyup.enter)="keyUp(username.value)" #username />
+
+<!-- Two-way databinding variable -->
+<input type="text" placeholder="username" [(ngModel)]="usrname" />
+<p>{{usrname}}</p>

@@ -1,0 +1,25 @@
+<div>
+    <h1>Make a list</h1>
+
+    <button (click)="addAnEntry()">
+        Add item
+    </button>
+</div>
+<div *ngIf="objArray.length > 0; then hasData else noData">
+
+</div>
+<div>
+
+</div>
+<ng-template #hasData>
+
+    <ul>
+        <li *ngFor="let item of objArray; index as i;">
+            {{item}} <button (click)="deleteObjectAtIndex(i)">Delete</button>
+        </li>
+    </ul>
+
+</ng-template>
+
+
+<ng-template #noData></ng-template>

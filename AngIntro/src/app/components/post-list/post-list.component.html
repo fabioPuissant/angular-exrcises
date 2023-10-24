@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let post of posts; index as i">
+        <app-post (onAddPost)="onAddPostHandler($event)" [post]="post" [colorProvided]="
+        'RED'"></app-post>
+    </li>
+</ul>
