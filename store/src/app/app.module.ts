@@ -27,6 +27,7 @@ import { CartComponent } from './pages/cart/cart.component';
 import { CartService } from './services/cart.service';
 import { StoreService } from './services/store.service';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http'
     MatBadgeModule,
     MatSnackBarModule,
     MatTreeModule, 
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [CartService, StoreService, HttpClient],
   bootstrap: [AppComponent]

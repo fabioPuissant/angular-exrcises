@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit {
   }
   onShowCategory(chosenCategory: string): void {
     this.category = chosenCategory;
-    console.log('received category: ', this.category)
+
     this.getProducts();
   }
 

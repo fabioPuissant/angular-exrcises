@@ -14,8 +14,10 @@ export class StoreService {
   constructor(private httpClient: HttpClient) { }
 
   getAllProducts(limit='8', sort = 'desc', category?: string): Observable<Array<Product>> {
+    console.log('categor is: ', category)
     const url = `${STORE_BASE_URL}/products${category ? ('/category/' + category) : ''}?sort=${sort}&limit=${limit}`;
-    console.log(url)
+    console.log('received, ', url);
+
     return this.httpClient.get<Array<Product>>(url);
   }
 

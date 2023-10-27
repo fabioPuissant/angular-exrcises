@@ -10,7 +10,7 @@ export class FiltersComponent implements OnInit, OnDestroy {
   @Output() showCategory = new EventEmitter<string>();
   categories: Array<string> | undefined;
   categoriesSubscription: Subscription| undefined;
-
+  selectedCategory: string | undefined;
   constructor(private storeService: StoreService ) {}
 
   ngOnInit(): void {
@@ -23,8 +23,8 @@ export class FiltersComponent implements OnInit, OnDestroy {
     }
   }
 
-  onShowCategory(category:string): void {
-    console.log('about to emit: ', category)
-    this.showCategory.emit(category);
+
+  onNgModelChange(event:any) {
+    this.selectedCategory? this.showCategory.emit(this.selectedCategory) : this.showCategory.emit('');
   }
 }
